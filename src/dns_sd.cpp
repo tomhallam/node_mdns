@@ -16,7 +16,6 @@ namespace node_mdns {
 
 // === dns_sd ===========================================
 NAN_METHOD(DNSServiceRegister);
-NAN_METHOD(DNSServiceUpdateRecord);
 NAN_METHOD(DNSServiceRefSockFD);
 NAN_METHOD(DNSServiceProcessResult);
 NAN_METHOD(DNSServiceBrowse);
@@ -59,7 +58,6 @@ init(Local<Object> target) {
 #endif
 
     defineFunction(target, "DNSServiceRegister", DNSServiceRegister);
-    defineFunction(target, "DNSServiceUpdateRecord", DNSServiceUpdateRecord);
     defineFunction(target, "DNSServiceRefSockFD", DNSServiceRefSockFD);
     defineFunction(target, "DNSServiceProcessResult", DNSServiceProcessResult);
     defineFunction(target, "DNSServiceBrowse", DNSServiceBrowse);
